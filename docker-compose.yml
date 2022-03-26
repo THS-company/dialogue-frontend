@@ -1,0 +1,12 @@
+version: "3"
+services:
+  frontend:
+    build: .
+    tty: true
+    volumes:
+      - ./src:/app/   
+      - /app/dialogue/node_modules/
+    ports:
+      - 3000:3000
+    entrypoint: >
+      sleep 86400
